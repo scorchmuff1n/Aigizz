@@ -22,25 +22,16 @@
       font-family: 'Space Grotesk', sans-serif;
     }
 
-    .neon-text-cyan {
-      text-shadow: 0 0 10px var(--neon-cyan),
-                  0 0 20px var(--neon-cyan),
-                  0 0 40px var(--neon-cyan);
-    }
-    
-    .neon-text-pink {
-      text-shadow: 0 0 10px var(--neon-pink),
-                  0 0 20px var(--neon-pink),
-                  0 0 40px var(--neon-pink);
-    }
+    .neon-text-cyan { text-shadow: 0 0 15px var(--neon-cyan), 0 0 30px var(--neon-cyan); }
+    .neon-text-pink { text-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink); }
 
     .glass {
-      background: rgba(10, 10, 20, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(10, 10, 20, 0.92);
+      backdrop-filter: blur(16px);
     }
 
     .hero-bg {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #0a0a0a 100%);
     }
 
     .neon-border {
@@ -50,36 +41,50 @@
     }
 
     .pulse-glow {
-      animation: pulse-glow 2s infinite alternate;
+      animation: pulse-glow 3s infinite alternate;
     }
 
     @keyframes pulse-glow {
-      from { text-shadow: 0 0 10px #00ffcc; }
-      to { text-shadow: 0 0 30px #00ffcc, 0 0 50px #ff00aa; }
+      from { text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00aa; }
+      to { text-shadow: 0 0 30px #00ffcc, 0 0 60px #ff00aa; }
     }
   </style>
 </head>
 <body class="bg-[#0a0a0a] text-white overflow-x-hidden">
-  
+
   <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center text-xl font-bold">NF</div>
-        <h1 class="title-font text-2xl font-semibold tracking-tighter neon-text-cyan">NEON FANTASY</h1>
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center text-2xl font-bold neon-border">NF</div>
+        <h1 class="title-font text-3xl font-bold tracking-tighter neon-text-cyan">NEON FANTASY</h1>
       </div>
-      
+
+      <!-- Desktop Menu -->
       <div class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="#generator" class="hover:text-cyan-400 transition-colors">GENERATE</a>
         <a href="#library" class="hover:text-cyan-400 transition-colors">LIBRARY</a>
         <a href="#characters" class="hover:text-cyan-400 transition-colors">CHARACTERS</a>
       </div>
-      
-      <a href="#generator" 
-         class="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all flex items-center gap-2">
-        <i class="fas fa-bolt"></i>
-        START CREATING
+
+      <a href="#generator" class="hidden md:flex px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-cyan-400 transition-all items-center gap-2">
+        <i class="fas fa-bolt"></i> START CREATING
       </a>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden text-3xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass border-t border-white/10 py-6">
+      <div class="flex flex-col gap-6 px-6 text-center text-lg">
+        <a href="#generator" class="hover:text-cyan-400">GENERATE</a>
+        <a href="#library" class="hover:text-cyan-400">LIBRARY</a>
+        <a href="#characters" class="hover:text-cyan-400">CHARACTERS</a>
+        <a href="#generator" class="mt-4 py-4 bg-gradient-to-r from-cyan-400 to-pink-500 text-black font-bold rounded-2xl">START CREATING NOW</a>
+      </div>
     </div>
   </nav>
 
@@ -87,159 +92,131 @@
   <section class="hero-bg min-h-screen flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div class="space-y-8">
-        <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
+        <div class="inline-flex items-center gap-2 bg-white/10 px-5 py-2 rounded-full text-sm pulse-glow">
           <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-          LIVE AI GENERATIONS
+          LIVE • UNCENSORED AI
         </div>
         
-        <h1 class="text-6xl md:text-7xl font-bold title-font leading-none tracking-tighter">
-          UNLEASH YOUR<br>
-          <span class="neon-text-cyan">DEEPEST</span><br>
-          FANTASIES
+        <h1 class="text-6xl md:text-7xl font-bold title-font leading-none tracking-tighter neon-text-cyan">
+          YOUR WILDEST<br>ANIMATED FANTASIES
         </h1>
         
-        <p class="text-xl text-gray-400 max-w-md">
-          Fully animated adult AI videos. Hyper-realistic. Limitless. Made for you.
-        </p>
+        <p class="text-2xl text-gray-300">Hyper-realistic • Hentai • Fetish • Fully Custom</p>
         
         <div class="flex flex-wrap gap-4">
-          <a href="#generator" 
-             class="px-8 py-4 bg-gradient-to-r from-cyan-400 to-pink-500 text-black font-semibold rounded-2xl text-lg flex items-center gap-3 hover:scale-105 transition-transform">
-            <i class="fas fa-play"></i>
-            GENERATE NOW
+          <a href="#generator" class="px-10 py-5 bg-gradient-to-r from-cyan-400 to-pink-500 text-black font-bold text-xl rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
+            <i class="fas fa-play"></i> GENERATE VIDEO
           </a>
-          <a href="#library" 
-             class="px-8 py-4 border border-white/30 hover:border-white/70 font-medium rounded-2xl transition-colors">
-            BROWSE LIBRARY
-          </a>
-        </div>
-        
-        <div class="flex items-center gap-8 text-sm">
-          <div>100% Private</div>
-          <div>4K Animation</div>
-          <div>Instant Delivery</div>
         </div>
       </div>
-      
-      <!-- HERO PREVIEW -->
+
+      <!-- Hero Video Preview -->
       <div class="relative">
         <div class="aspect-video bg-black rounded-3xl overflow-hidden neon-border shadow-2xl">
-          <!-- Replace this src with your own looping GIF or video -->
           <video autoplay loop muted playsinline class="w-full h-full object-cover">
             <source src="https://assets.mixkit.co/videos/preview/12345/12345-large.mp4" type="video/mp4">
           </video>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6">
-            <div class="text-xs tracking-widest text-cyan-400">NEW • HYPER-REAL ANIMATION</div>
-            <div class="text-2xl font-semibold">Succubus Queen Claims Her Prey</div>
-          </div>
         </div>
-        
-        <!-- Floating badges -->
-        <div class="absolute -top-4 -right-4 bg-black/80 glass px-5 py-3 rounded-2xl border border-cyan-400/30 text-sm flex items-center gap-2">
-          <span class="text-cyan-400">●</span> 4K 60FPS
+        <div class="absolute -bottom-4 -left-4 bg-black/90 glass px-6 py-4 rounded-2xl text-sm border border-cyan-400/50">
+          New: 4K Succubus Ritual
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GENERATOR SECTION -->
+  <!-- GENERATOR -->
   <section id="generator" class="py-24 border-t border-white/10">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-12">
-        <h2 class="text-5xl font-bold title-font mb-4 neon-text-pink">CREATE YOUR FANTASY</h2>
-        <p class="text-gray-400 text-lg">Describe any scene. We animate it.</p>
+        <h2 class="text-5xl font-bold title-font neon-text-pink">DESCRIBE YOUR FANTASY</h2>
+        <p class="text-gray-400 mt-3">The dirtier the prompt, the better the result</p>
       </div>
       
       <div class="glass rounded-3xl p-8 md:p-12 neon-border">
-        <textarea id="prompt" rows="4"
-          class="w-full bg-black/50 border border-white/20 rounded-2xl px-6 py-5 text-lg focus:outline-none focus:border-cyan-400 resize-none"
-          placeholder="A seductive cyberpunk elf riding a glowing mechanical dragon in a neon Tokyo alley, intense close-ups, cinematic lighting..."></textarea>
+        <textarea id="prompt" rows="5" 
+          class="w-full bg-black/60 border border-white/20 rounded-3xl px-8 py-6 text-lg focus:outline-none focus:border-pink-500 resize-none"
+          placeholder="A dominant latex succubus with glowing horns riding her bound lover in a neon penthouse, extreme close-ups, sweat, moans..."></textarea>
         
-        <div class="mt-6 flex flex-wrap gap-4">
-          <button onclick="fakeGenerate()" 
-            class="flex-1 py-6 bg-gradient-to-r from-cyan-400 to-pink-500 text-black font-bold text-xl rounded-2xl hover:scale-105 transition-all flex items-center justify-center gap-3">
-            <i class="fas fa-bolt"></i>
-            GENERATE VIDEO
-          </button>
-        </div>
+        <button onclick="fakeGenerate()" 
+          class="mt-8 w-full py-7 bg-gradient-to-r from-cyan-400 to-pink-500 text-black font-bold text-2xl rounded-3xl hover:scale-105 transition-all flex items-center justify-center gap-4">
+          <i class="fas fa-bolt"></i>
+          GENERATE YOUR VIDEO
+        </button>
         
-        <div class="text-center text-xs text-gray-500 mt-6">
-          Free tier: 3 generations per day • Results delivered in ~2-5 minutes
-        </div>
+        <p class="text-center text-xs text-gray-500 mt-6">Free: Up to 3 generations/day • Manual delivery for now</p>
       </div>
     </div>
   </section>
 
-  <!-- LIBRARY / GALLERY -->
-  <section id="library" class="py-24 bg-black/50">
+  <!-- CHARACTERS -->
+  <section id="characters" class="py-24 bg-black/60">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold title-font text-center mb-12">LATEST CREATIONS</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Video Card 1 -->
-        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all">
-          <div class="aspect-video bg-zinc-900 relative">
+      <h2 class="text-4xl font-bold title-font text-center mb-12 neon-text-cyan">BUILD YOUR PERFECT CHARACTER</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Add more as you generate -->
+        <div class="group bg-zinc-950 rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://picsum.photos/id/1011/400/400" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400 text-sm">Latex Demoness</div>
+            <div class="text-xs text-gray-500">Ready for custom scenes</div>
+          </div>
+        </div>
+        <!-- Duplicate & change images/prompts -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIBRARY -->
+  <section id="library" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold title-font text-center mb-12">LATEST ANIMATED CREATIONS</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Replace placeholders with your real clips later -->
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all cursor-pointer">
+          <div class="aspect-video relative">
             <img src="https://picsum.photos/id/1015/600/340" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i class="fas fa-play text-5xl text-white/70 group-hover:text-cyan-400 transition-colors"></i>
+            <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-colors">
+              <i class="fas fa-play text-6xl text-white/80"></i>
             </div>
           </div>
           <div class="p-5">
-            <div class="text-cyan-400 text-xs">2:18 • REALISTIC</div>
-            <div class="font-medium mt-1">Vampire Mistress Drains Her Lover</div>
+            <div class="text-xs text-cyan-400">2:45 • REALISTIC</div>
+            <div class="font-semibold">Vampire Queen’s Eternal Night</div>
           </div>
         </div>
-        
-        <!-- Repeat for more cards -->
-        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all">
-          <div class="aspect-video bg-zinc-900 relative">
-            <img src="https://picsum.photos/id/201/600/340" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i class="fas fa-play text-5xl text-white/70 group-hover:text-cyan-400 transition-colors"></i>
-            </div>
-          </div>
-          <div class="p-5">
-            <div class="text-cyan-400 text-xs">1:45 • HENTAI</div>
-            <div class="font-medium mt-1">Tentacle Queen Claims Her Prize</div>
-          </div>
-        </div>
-        
-        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all">
-          <div class="aspect-video bg-zinc-900 relative">
-            <img src="https://picsum.photos/id/237/600/340" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i class="fas fa-play text-5xl text-white/70 group-hover:text-cyan-400 transition-colors"></i>
-            </div>
-          </div>
-          <div class="p-5">
-            <div class="text-cyan-400 text-xs">3:02 • 3D ANIMATION</div>
-            <div class="font-medium mt-1">Succubus in Zero Gravity</div>
-          </div>
-        </div>
+        <!-- Add 2-3 more cards the same way -->
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 border-t border-white/10">
+  <footer class="py-12 border-t border-white/10 bg-black">
     <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
-      <p>© 2026 NEON FANTASY • Solo Project • All fantasies animated</p>
-      <p class="mt-2">Built with 🔥 and free tools</p>
+      <p>© 2026 NEON FANTASY — Solo Built Adult AI Video Playground</p>
+      <p class="mt-2">Pushing limits with free tools • Made filthy on Vercel</p>
     </div>
   </footer>
 
   <script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
     function fakeGenerate() {
       const prompt = document.getElementById('prompt').value.trim();
       if (!prompt) {
-        alert("Enter a fantasy first... make it dirty 😉");
+        alert("Enter a dirty fantasy first…");
         return;
       }
-      alert("✅ Prompt received!\n\nYour video is being generated...\n\n(Replace this with real backend later)");
+      alert("✅ Prompt received!\n\nGenerating your video now…\n\n(We'll connect real AI tools soon)");
     }
-
-    // Tailwind script already loaded
   </script>
 </body>
 </html>
