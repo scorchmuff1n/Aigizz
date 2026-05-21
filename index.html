@@ -1,96 +1,44 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEON FANTASY • AI Adult Videos</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-    :root { --neon-cyan: #00ffcc; --neon-pink: #ff00aa; }
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .title-font { font-family: 'Space Grotesk', sans-serif; }
-    .neon-text-cyan { text-shadow: 0 0 15px var(--neon-cyan), 0 0 30px var(--neon-cyan); }
-    .neon-text-pink { text-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink); }
-    .glass { background: rgba(10, 10, 20, 0.92); backdrop-filter: blur(16px); }
-    .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #0a0a0a 100%); }
-    .neon-border { border: 2px solid transparent; background: linear-gradient(#0a0a0a, #0a0a0a) padding-box, linear-gradient(90deg, #00ffcc, #ff00aa) border-box; }
-  </style>
-</head>
-<body class="bg-[#0a0a0a] text-white overflow-x-hidden">
-
-  <!-- NAVBAR (shortened) -->
-  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center text-2xl font-bold neon-border">NF</div>
-        <h1 class="title-font text-3xl font-bold tracking-tighter neon-text-cyan">NEON FANTASY</h1>
+<!-- CHARACTERS SECTION - Replace your current one with this -->
+<section id="characters" class="py-24 bg-black/60">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-5xl font-bold title-font neon-text-cyan text-center mb-12">YOUR SIGNATURE CHARACTERS</h2>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- 1. Latex Demoness -->
+      <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+        <img src="https://picsum.photos/id/1011/400/400" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform" alt="Latex Demoness">
+        <div class="p-4 text-center">
+          <div class="text-cyan-400 font-medium">Latex Demoness</div>
+          <button onclick="useCharacter('Latex Demoness')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full transition-colors">Use Character</button>
+        </div>
       </div>
-      <div class="flex gap-8 text-sm">
-        <a href="#generator" class="hover:text-cyan-400">GENERATE</a>
-        <a href="#library" class="hover:text-cyan-400">LIBRARY</a>
-        <a href="#characters" class="hover:text-cyan-400">CHARACTERS</a>
+
+      <!-- 2. Cyberpunk Succubus -->
+      <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+        <img src="https://picsum.photos/id/201/400/400" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform" alt="Cyberpunk Succubus">
+        <div class="p-4 text-center">
+          <div class="text-cyan-400 font-medium">Cyberpunk Succubus</div>
+          <button onclick="useCharacter('Cyberpunk Succubus')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full transition-colors">Use Character</button>
+        </div>
       </div>
-    </div>
-  </nav>
 
-  <!-- HERO + GENERATOR (short) -->
-  <section class="hero-bg min-h-screen flex items-center pt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h1 class="text-6xl font-bold title-font neon-text-cyan">NEON FANTASY</h1>
-      <a href="#characters" class="mt-10 inline-block px-10 py-4 bg-gradient-to-r from-cyan-400 to-pink-500 text-black font-bold rounded-3xl">BROWSE CHARACTERS ↓</a>
-    </div>
-  </section>
-
-  <!-- CHARACTERS - STATIC HTML (this will definitely show) -->
-  <section id="characters" class="py-24 bg-black/60">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-5xl font-bold title-font neon-text-cyan text-center mb-12">YOUR SIGNATURE CHARACTERS</h2>
-      
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- Card 1 -->
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://picsum.photos/id/1011/400/400" class="w-full aspect-square object-cover" alt="Latex Demoness">
-          <div class="p-4 text-center">
-            <div class="text-cyan-400 font-medium">Latex Demoness</div>
-            <button onclick="alert('Character selected! Paste into generator.')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use This Character</button>
-          </div>
+      <!-- 3. Tentacle Queen -->
+      <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+        <img src="https://picsum.photos/id/237/400/400" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform" alt="Tentacle Queen">
+        <div class="p-4 text-center">
+          <div class="text-cyan-400 font-medium">Tentacle Queen</div>
+          <button onclick="useCharacter('Tentacle Queen')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full transition-colors">Use Character</button>
         </div>
+      </div>
 
-        <!-- Card 2 -->
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://picsum.photos/id/201/400/400" class="w-full aspect-square object-cover" alt="Cyberpunk Succubus">
-          <div class="p-4 text-center">
-            <div class="text-cyan-400 font-medium">Cyberpunk Succubus</div>
-            <button onclick="alert('Character selected! Paste into generator.')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use This Character</button>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://picsum.photos/id/237/400/400" class="w-full aspect-square object-cover" alt="Tentacle Queen">
-          <div class="p-4 text-center">
-            <div class="text-cyan-400 font-medium">Tentacle Queen</div>
-            <button onclick="alert('Character selected! Paste into generator.')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use This Character</button>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://picsum.photos/id/180/400/400" class="w-full aspect-square object-cover" alt="Vampire Mistress">
-          <div class="p-4 text-center">
-            <div class="text-cyan-400 font-medium">Vampire Mistress</div>
-            <button onclick="alert('Character selected! Paste into generator.')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use This Character</button>
-          </div>
+      <!-- 4. Vampire Mistress -->
+      <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+        <img src="https://picsum.photos/id/180/400/400" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform" alt="Vampire Mistress">
+        <div class="p-4 text-center">
+          <div class="text-cyan-400 font-medium">Vampire Mistress</div>
+          <button onclick="useCharacter('Vampire Mistress')" class="mt-3 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full transition-colors">Use Character</button>
         </div>
       </div>
     </div>
-  </section>
-
-  <footer class="py-12 text-center text-gray-500">
-    <p>© 2026 NEON FANTASY</p>
-  </footer>
-
-</body>
-</html>
+  </div>
+</section>
