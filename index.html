@@ -67,4 +67,45 @@
       <h2 class="text-5xl font-bold title-font neon-text-cyan text-center mb-12">YOUR SIGNATURE CHARACTERS</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://picsum.photos/id/1011/400/400" class="w-full aspect-square object-cover group
+          <img src="https://picsum.photos/id/1011/400/400" class="w-full aspect-square object-cover group-hover:scale-110" alt="Latex Demoness">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400">Latex Demoness</div>
+            <button onclick="useCharacter('Latex Demoness')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://picsum.photos/id/201/400/400" class="w-full aspect-square object-cover group-hover:scale-110" alt="Cyberpunk Succubus">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400">Cyberpunk Succubus</div>
+            <button onclick="useCharacter('Cyberpunk Succubus')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://picsum.photos/id/237/400/400" class="w-full aspect-square object-cover group-hover:scale-110" alt="Tentacle Queen">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400">Tentacle Queen</div>
+            <button onclick="useCharacter('Tentacle Queen')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://picsum.photos/id/180/400/400" class="w-full aspect-square object-cover group-hover:scale-110" alt="Vampire Mistress">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400">Vampire Mistress</div>
+            <button onclick="useCharacter('Vampire Mistress')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function fakeGenerate() {
+      alert("✅ Video generation started! (Demo)");
+    }
+    function useCharacter(name) {
+      document.getElementById('prompt').value = `Explicit scene featuring ${name}...`;
+      document.getElementById('prompt').scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
