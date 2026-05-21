@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+✅ HERE IS THE FULLY UPDATED, COMPLETE index.html with everything we've built so far:
+
+Working Hero with your latest video
+Generator section
+Characters section with your actual images
+Clean layout and mobile responsive
+
+HTML<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +19,7 @@
     body { font-family: 'Inter', system-ui, sans-serif; }
     .title-font { font-family: 'Space Grotesk', sans-serif; }
     .neon-text-cyan { text-shadow: 0 0 25px var(--neon-cyan), 0 0 50px var(--neon-cyan); }
+    .neon-text-pink { text-shadow: 0 0 25px var(--neon-pink), 0 0 50px var(--neon-pink); }
     .glass { background: rgba(10, 10, 20, 0.95); backdrop-filter: blur(20px); }
     .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #0a0a0a 100%); }
     .neon-border { border: 2px solid transparent; background: linear-gradient(#0a0a0a, #0a0a0a) padding-box, linear-gradient(90deg, #00ffcc, #ff00aa) border-box; }
@@ -35,8 +43,8 @@
     </div>
   </nav>
 
-  <!-- HERO - VIDEO BOX FURTHER DOWN + MORE TO THE RIGHT -->
-  <section class="hero-bg min-h-screen flex items-center pt-8">
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-12">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div class="space-y-8">
         <div class="inline-flex items-center gap-2 bg-white/10 px-5 py-2 rounded-full text-sm">
@@ -52,9 +60,9 @@
         </a>
       </div>
 
-      <!-- VIDEO BOX - FURTHER DOWN + RIGHT ALIGNED -->
-      <div class="relative mt-16 md:mt-24 lg:mt-32">
-        <div class="aspect-[9/14] max-w-[460px] mx-auto md:ml-auto bg-black rounded-3xl overflow-hidden neon-border shadow-2xl">
+      <!-- YOUR VIDEO -->
+      <div class="relative mt-8 md:mt-12">
+        <div class="aspect-[9/14] max-w-[460px] mx-auto bg-black rounded-3xl overflow-hidden neon-border shadow-2xl">
           <video autoplay loop muted playsinline class="w-full h-full object-cover">
             <source src="https://files.catbox.moe/xei8xr.mp4" type="video/mp4">
           </video>
@@ -67,9 +75,70 @@
     </div>
   </section>
 
+  <!-- GENERATOR -->
+  <section id="generator" class="py-24 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-bold title-font neon-text-pink">DESCRIBE YOUR FANTASY</h2>
+        <p class="text-gray-400 mt-3">The dirtier the prompt, the better the result</p>
+      </div>
+      <div class="glass rounded-3xl p-8 md:p-12 neon-border">
+        <textarea id="prompt" rows="5" class="w-full bg-black/60 border border-white/20 rounded-3xl px-8 py-6 text-lg focus:outline-none focus:border-pink-500 resize-none" placeholder="A dominant latex succubus..."></textarea>
+        <button onclick="fakeGenerate()" class="mt-8 w-full py-7 bg-gradient-to-r from-cyan-400 to-pink-500 text-black font-bold text-2xl rounded-3xl hover:scale-105 transition-all">GENERATE VIDEO</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTERS -->
+  <section id="characters" class="py-24 bg-black/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold title-font neon-text-cyan text-center mb-12">YOUR SIGNATURE CHARACTERS</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://files.catbox.moe/mxy2hl.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400 font-medium">Latex Demoness</div>
+            <button onclick="useCharacter('Latex Demoness')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://files.catbox.moe/upba4f.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400 font-medium">Cyberpunk Succubus</div>
+            <button onclick="useCharacter('Cyberpunk Succubus')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://files.catbox.moe/pvn4tw.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400 font-medium">Tentacle Queen</div>
+            <button onclick="useCharacter('Tentacle Queen')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+
+        <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
+          <img src="https://files.catbox.moe/mxy2hl.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400 font-medium">Vampire Mistress</div>
+            <button onclick="useCharacter('Vampire Mistress')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <script>
     function fakeGenerate() {
       alert("✅ Prompt received! Generating your video now...");
+    }
+
+    function useCharacter(name) {
+      document.getElementById('prompt').value = `Explicit animated scene featuring ${name}... dominant, seductive, neon lighting, sweat, perfect body...`;
+      document.getElementById('prompt').scrollIntoView({ behavior: "smooth" });
     }
   </script>
 </body>
