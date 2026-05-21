@@ -105,4 +105,26 @@
         </div>
 
         <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://files.catbox.moe/mxy2hl.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform
+          <img src="https://files.catbox.moe/mxy2hl.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
+          <div class="p-4 text-center">
+            <div class="text-cyan-400 font-medium">Vampire Mistress</div>
+            <button onclick="useCharacter('Vampire Mistress')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function fakeGenerate() {
+      alert("✅ Prompt received! Generating your video now...");
+    }
+
+    function useCharacter(name) {
+      document.getElementById('prompt').value = `Explicit animated scene with ${name}... dominant, seductive, neon lighting, sweat, perfect body...`;
+      document.getElementById('prompt').scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
