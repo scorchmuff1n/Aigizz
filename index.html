@@ -74,42 +74,38 @@
     </div>
   </section>
 
-  <!-- CHARACTERS - WITH YOUR NEW EXPLICIT IMAGES -->
+  <!-- CHARACTERS - YOUR UPLOADED IMAGES -->
   <section id="characters" class="py-24 bg-black/60">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-5xl font-bold title-font neon-text-cyan text-center mb-12">YOUR SIGNATURE CHARACTERS</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-        <!-- 1 Latex Demoness -->
         <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://files.catbox.moe/ybha4u.jpg">
+          <img src="https://files.catbox.moe/mxy2hl.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
           <div class="p-4 text-center">
             <div class="text-cyan-400 font-medium">Latex Demoness</div>
             <button onclick="useCharacter('Latex Demoness')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
           </div>
         </div>
 
-        <!-- 2 Cyberpunk Succubus -->
         <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://files.catbox.moe/upba4f.jpg">
+          <img src="https://files.catbox.moe/upba4f.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
           <div class="p-4 text-center">
             <div class="text-cyan-400 font-medium">Cyberpunk Succubus</div>
             <button onclick="useCharacter('Cyberpunk Succubus')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
           </div>
         </div>
 
-        <!-- 3 Tentacle Queen -->
         <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://files.catbox.moe/mxy2hl.jpg">
+          <img src="https://files.catbox.moe/pvn4tw.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
           <div class="p-4 text-center">
             <div class="text-cyan-400 font-medium">Tentacle Queen</div>
             <button onclick="useCharacter('Tentacle Queen')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
           </div>
         </div>
 
-        <!-- 4 Vampire Mistress -->
         <div class="group bg-black rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500 transition-all">
-          <img src="https://files.catbox.moe/pvn4tw.jpg">
+          <img src="https://files.catbox.moe/mxy2hl.jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform">
           <div class="p-4 text-center">
             <div class="text-cyan-400 font-medium">Vampire Mistress</div>
             <button onclick="useCharacter('Vampire Mistress')" class="mt-4 text-xs px-6 py-2 bg-pink-500/20 hover:bg-pink-500 rounded-full">Use Character</button>
@@ -125,7 +121,7 @@
       alert("✅ Prompt received! Generating your video now...");
     }
     function useCharacter(name) {
-      document.getElementById('prompt').value = `Explicit scene with ${name}... make it filthy`;
+      document.getElementById('prompt').value = `Explicit scene featuring ${name} - dominant, seductive, detailed, neon lighting...`;
       document.getElementById('prompt').scrollIntoView({ behavior: "smooth" });
     }
   </script>
